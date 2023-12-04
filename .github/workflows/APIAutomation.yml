@@ -78,6 +78,6 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
-          PERSONAL_TOKEN: ${{ secrets.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}}
+          PERSONAL_TOKEN: ${{ secrets.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}}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
