@@ -20,7 +20,7 @@ jobs:
 
       - name: Run Postman tests
         run: |
-           newman run Admin_API_QA.json -e BANK78_ENV_postman_environment.json --reporters cli,allure
+           newman run Admin_API_QA.json -e Admin_API_Collection/BANK78_ENV_postman_environment.json --reporters cli,allure
            echo "Postman tests run."
 
       - name: Get Allure history
