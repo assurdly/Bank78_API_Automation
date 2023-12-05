@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Dec 05 13:19:29 GMT 2023","Tue Dec 05 13:19:30 GMT 2023","594","Open Banking Gateway API - AC Copy","Auth","Sign Up","","","Sign Up",""
+"passed","Tue Dec 05 13:19:30 GMT 2023","Tue Dec 05 13:19:30 GMT 2023","110","Open Banking Gateway API - AC Copy","Auth","Sign Up","","","Sign Up - Duplicate account Copy",""
