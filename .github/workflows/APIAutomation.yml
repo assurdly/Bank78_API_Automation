@@ -22,7 +22,12 @@ jobs:
         run: |
            newman run Admin_API_Collection/Admin_API_QA.json -e Admin_API_Collection/BANK78_ENV_postman_environment.json --reporters cli,allure
            echo "Postman tests run."
-
+           
+      - name: Proceed with workflow
+        run: |     
+          test-runner-command || true 
+          echo "Workflow continues to generate result"
+          
       - name: Get Allure history
         uses: actions/checkout@v2
         if: always()
