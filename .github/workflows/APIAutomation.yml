@@ -44,6 +44,7 @@ jobs:
         run: sleep 10
 
       - name: Update Allure Report Widget Title
+        continue-on-error: true
         if: steps.build.outcome == 'success'
         run: |
           # Find the latest folder with numerical values in the allure-history directory
@@ -60,7 +61,7 @@ jobs:
             cat "$summary_path"  # Print content before
 
             # Use sed to update the content within the <h2> element
-            sudo sed -i 's/Allure Report/[Project Name] - API Quality Readiness/' "$summary_path"
+            sudo sed -i 's/Allure Report/Open Banking - API Quality Readiness/' "$summary_path"
 
             cat "$summary_path"  # Print content after
           else
@@ -73,5 +74,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v2
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: dev
+          PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
